@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Formulário de Login</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="stylesheet" type="text/css" href="loginprofessor.css" />
+</head>
+<body>
+  <div class="container" >
+    <a class="links" id="paracadastro"></a>
+    <a class="links" id="paralogin"></a>
+     
+    <div class="content">      
+      <!--FORMULÁRIO DE LOGIN-->
+      <div id="login">
+        <form method="post" action=""> 
+          <!--<h1>Login</h1>--> 
+          <p> 
+            <label for="nome_login">CPF:</label>
+            <input id="nome_login" name="nome_login"  type="text" placeholder="CPF:"/>
+          </p>
+           
+          <p> 
+            <label for="matricula_login">Senha</label>
+            <input id="matricula_login" name="email_login"  type="password" placeholder="sua senha de 10 caracter"/> 
+          </p>
+           
+          <p> 
+            <input type="checkbox" name="manterlogado" id="manterlogado" value="" /> 
+            <label for="manterlogado">Manter-me logado</label>
+          </p>
+               
+          <p class="link">
+            Ainda não tem conta?
+            <a href="cadastroprofessor.html">Cadastre-se</a>
+            <a href="telaprofessor.html"> Logar</a>
+            
+        </p>
+        </form>
+      </div>

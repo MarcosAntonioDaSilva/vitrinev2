@@ -1,0 +1,333 @@
+<html lang="pt" class="translated-ltr"><head>
+	<meta charset="utf-8">
+	<title>Navegação suspensa: demonstração sensível ao toque e responsiva por Osvaldas Valutis</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="description" content="Demo of Drop-Down Navigation: Touch-Friendly and Responsive">
+	<meta name="robots" content="all">
+	<meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1">
+	<link rel="canonical" href="/examples/drop-down-navigation-touch-friendly-and-responsive">
+	<link rel="icon" href="../favicon.ico">
+	<link rel="stylesheet" href="../main.css">
+	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400">
+	<style>
+
+		body
+		{
+			background-color: #f7efeb;
+			padding: 1.25em; /* 20 */
+		}
+
+		#nav
+		{
+			width: 60em; /* 1000 */
+			font-family: 'Open Sans', sans-serif;
+			font-weight: 400;
+			position: absolute;
+			top: 25%;
+			left: 50%;
+			margin-left: -30em; /* 30 480 */
+		}
+
+			#nav > a
+			{
+				display: none;
+			}
+
+			#nav li
+			{
+				position: relative;
+			}
+				#nav li a
+				{
+					color: #fff;
+					display: block;
+				}
+				#nav li a:active
+				{
+					background-color: #c00 !important;
+				}
+
+			#nav span:after
+			{
+				width: 0;
+				height: 0;
+				border: 0.313em solid transparent; /* 5 */
+				border-bottom: none;
+				border-top-color: #efa585;
+				content: '';
+				vertical-align: middle;
+				display: inline-block;
+				position: relative;
+				right: -0.313em; /* 5 */
+			}
+
+			/* first level */
+
+			#nav > ul
+			{
+				height: 3.75em; /* 60 */
+				background-color: #e15a1f;
+			}
+				#nav > ul > li
+				{
+					width: 25%;
+					height: 100%;
+					float: left;
+				}
+					#nav > ul > li > a
+					{
+						height: 100%;
+						font-size: 1.5em; /* 24 */
+						line-height: 2.5em; /* 60 (24) */
+						text-align: center;
+					}
+						#nav > ul > li:not( :last-child ) > a
+						{
+							border-right: 1px solid #cc470d;
+						}
+						#nav > ul > li:hover > a,
+						#nav > ul:not( :hover ) > li.active > a
+						{
+							background-color: #cc470d;
+						}
+
+
+				/* second level */
+
+				#nav li ul
+				{
+					background-color: #cc470d;
+					display: none;
+					position: absolute;
+					top: 100%;
+				}
+					#nav li:hover ul
+					{
+						display: block;
+						left: 0;
+						right: 0;
+					}
+						#nav li:not( :first-child ):hover ul
+						{
+							left: -1px;
+						}
+						#nav li ul a
+						{
+							font-size: 1.25em; /* 20 */
+							border-top: 1px solid #e15a1f;
+							padding: 0.75em; /* 15 (20) */
+						}
+							#nav li ul li a:hover,
+							#nav li ul:not( :hover ) li.active a
+							{
+								background-color: #e15a1f;
+							}
+
+
+		@media only screen and ( max-width: 62.5em ) /* 1000 */
+		{
+			#nav
+			{
+				width: 100%;
+				position: static;
+				margin: 0;
+			}
+		}
+
+		@media only screen and ( max-width: 40em ) /* 640 */
+		{
+			html
+			{
+				font-size: 75%; /* 12 */
+			}
+
+			#nav
+			{
+				position: relative;
+				top: auto;
+				left: auto;
+			}
+				#nav > a
+				{
+					width: 3.125em; /* 50 */
+					height: 3.125em; /* 50 */
+					text-align: left;
+					text-indent: -9999px;
+					background-color: #e15a1f;
+					position: relative;
+				}
+					#nav > a:before,
+					#nav > a:after
+					{
+						position: absolute;
+						border: 2px solid #fff;
+						top: 35%;
+						left: 25%;
+						right: 25%;
+						content: '';
+					}
+					#nav > a:after
+					{
+						top: 60%;
+					}
+
+				#nav:not( :target ) > a:first-of-type,
+				#nav:target > a:last-of-type
+				{
+					display: block;
+				}
+
+
+			/* first level */
+
+			#nav > ul
+			{
+				height: auto;
+				display: none;
+				position: absolute;
+				left: 0;
+				right: 0;
+			}
+				#nav:target > ul
+				{
+					display: block;
+				}
+				#nav > ul > li
+				{
+					width: 100%;
+					float: none;
+				}
+					#nav > ul > li > a
+					{
+						height: auto;
+						text-align: left;
+						padding: 0 0.833em; /* 20 (24) */
+					}
+						#nav > ul > li:not( :last-child ) > a
+						{
+							border-right: none;
+							border-bottom: 1px solid #cc470d;
+						}
+
+
+				/* second level */
+
+				#nav li ul
+				{
+					position: static;
+					padding: 1.25em; /* 20 */
+					padding-top: 0;
+				}
+		
+			}
+
+#aluno{
+	margin:0;
+	font-family:Times;
+	font-size:20px; 
+	font-weight:bold;
+	width: 100%;
+	background-color:mediumblue;
+									}
+
+	</style>
+<script src="https://apis.google.com/_/scs/apps-static/_/js/k=oz.gapi.pt_BR.VESh1b8XSWM.O/m=auth/exm=plusone/rt=j/sv=1/d=1/ed=1/am=AQ/rs=AGLTcCNaCafCsR0qyyuljw2UAMvhNAcnbg/cb=gapi.loaded_1" async=""></script><script src="https://apis.google.com/_/scs/apps-static/_/js/k=oz.gapi.pt_BR.VESh1b8XSWM.O/m=plusone/rt=j/sv=1/d=1/ed=1/am=AQ/rs=AGLTcCNaCafCsR0qyyuljw2UAMvhNAcnbg/cb=gapi.loaded_0" async=""></script><script src="https://connect.facebook.net/en_GB/all.js?hash=5f8eb8daafecc00a1da8be10143a2bcd" async="" crossorigin="anonymous"></script><script id="_carbonads_projs" type="text/javascript" src="https://srv.carbonads.net/ads/CKYI5K77.json?segment=placement:osvaldasinfo&amp;callback=_carbonads_go"></script><link type="text/css" rel="stylesheet" charset="UTF-8" href="https://translate.googleapis.com/translate_static/css/translateelement.css"><script charset="utf-8" src="https://platform.twitter.com/js/button.5573c974dc31bbdab5ea7923a0bd5cf3.js"></script><style type="text/css" data-fbcssmodules="css:fb.css.base css:fb.css.dialog css:fb.css.iframewidget css:fb.css.customer_chat_plugin_iframe">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_dialog_advanced{border-radius:8px;padding:10px}.fb_dialog_content{background:#fff;color:#373737}.fb_dialog_close_icon{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{left:5px;right:auto;top:5px}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{height:100%;left:0;margin:0;overflow:visible;position:absolute;top:-10000px;transform:none;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{background:none;height:auto;min-height:initial;min-width:initial;width:auto}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{clear:both;color:#fff;display:block;font-size:18px;padding-top:20px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .4);bottom:0;left:0;min-height:100%;position:absolute;right:0;top:0;width:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_mobile .fb_dialog_iframe{position:sticky;top:0}.fb_dialog_content .dialog_header{background:linear-gradient(from(#738aba), to(#2c4987));border-bottom:1px solid;border-color:#043b87;box-shadow:white 0 1px 1px -1px inset;color:#fff;font:bold 14px Helvetica, sans-serif;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:linear-gradient(from(#4267B2), to(#2a4887));background-clip:padding-box;border:1px solid #29487d;border-radius:3px;display:inline-block;line-height:18px;margin-top:3px;max-width:85px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{background:none;border:none;color:#fff;font:bold 12px Helvetica, sans-serif;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #4a4a4a;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f5f6f7;border:1px solid #4a4a4a;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-position:50% 50%;background-repeat:no-repeat;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}
+.fb_mpn_mobile_landing_page_slide_out{animation-duration:200ms;animation-name:fb_mpn_landing_page_slide_out;transition-timing-function:ease-in}.fb_mpn_mobile_landing_page_slide_out_from_left{animation-duration:200ms;animation-name:fb_mpn_landing_page_slide_out_from_left;transition-timing-function:ease-in}.fb_mpn_mobile_landing_page_slide_up{animation-duration:500ms;animation-name:fb_mpn_landing_page_slide_up;transition-timing-function:ease-in}.fb_mpn_mobile_bounce_in{animation-duration:300ms;animation-name:fb_mpn_bounce_in;transition-timing-function:ease-in}.fb_mpn_mobile_bounce_out{animation-duration:300ms;animation-name:fb_mpn_bounce_out;transition-timing-function:ease-in}.fb_mpn_mobile_bounce_out_v2{animation-duration:300ms;animation-name:fb_mpn_fade_out;transition-timing-function:ease-in}.fb_customer_chat_bounce_in_v2{animation-duration:300ms;animation-name:fb_bounce_in_v2;transition-timing-function:ease-in}.fb_customer_chat_bounce_in_from_left{animation-duration:300ms;animation-name:fb_bounce_in_from_left;transition-timing-function:ease-in}.fb_customer_chat_bounce_out_v2{animation-duration:300ms;animation-name:fb_bounce_out_v2;transition-timing-function:ease-in}.fb_customer_chat_bounce_out_from_left{animation-duration:300ms;animation-name:fb_bounce_out_from_left;transition-timing-function:ease-in}.fb_customer_chat_bubble_animated_no_badge{box-shadow:0 3px 12px rgba(0, 0, 0, .15);transition:box-shadow 150ms linear}.fb_customer_chat_bubble_animated_no_badge:hover{box-shadow:0 5px 24px rgba(0, 0, 0, .3)}.fb_customer_chat_bubble_animated_with_badge{box-shadow:-5px 4px 14px rgba(0, 0, 0, .15);transition:box-shadow 150ms linear}.fb_customer_chat_bubble_animated_with_badge:hover{box-shadow:-5px 8px 24px rgba(0, 0, 0, .2)}.fb_invisible_flow{display:inherit;height:0;overflow-x:hidden;width:0}.fb_new_ui_mobile_overlay_active{overflow:hidden}@keyframes fb_mpn_landing_page_slide_in{0%{border-radius:50%;margin:0 24px;width:60px}40%{border-radius:18px}100%{margin:0 12px;width:100% - 24px}}@keyframes fb_mpn_landing_page_slide_in_from_left{0%{border-radius:50%;left:12px;margin:0 24px;width:60px}40%{border-radius:18px}100%{left:12px;margin:0 12px;width:100% - 24px}}@keyframes fb_mpn_landing_page_slide_out{0%{margin:0 12px;width:100% - 24px}60%{border-radius:18px}100%{border-radius:50%;margin:0 24px;width:60px}}@keyframes fb_mpn_landing_page_slide_out_from_left{0%{left:12px;width:100% - 24px}60%{border-radius:18px}100%{border-radius:50%;left:12px;width:60px}}@keyframes fb_mpn_landing_page_slide_up{0%{bottom:0;opacity:0}100%{bottom:24px;opacity:1}}@keyframes fb_mpn_bounce_in{0%{opacity:.5;top:100%}100%{opacity:1;top:0}}@keyframes fb_mpn_fade_out{0%{bottom:30px;opacity:1}100%{bottom:0;opacity:0}}@keyframes fb_mpn_bounce_out{0%{opacity:1;top:0}100%{opacity:.5;top:100%}}@keyframes fb_bounce_in_v2{0%{opacity:0;transform:scale(0, 0);transform-origin:bottom right}50%{transform:scale(1.03, 1.03);transform-origin:bottom right}100%{opacity:1;transform:scale(1, 1);transform-origin:bottom right}}@keyframes fb_bounce_in_from_left{0%{opacity:0;transform:scale(0, 0);transform-origin:bottom left}50%{transform:scale(1.03, 1.03);transform-origin:bottom left}100%{opacity:1;transform:scale(1, 1);transform-origin:bottom left}}@keyframes fb_bounce_out_v2{0%{opacity:1;transform:scale(1, 1);transform-origin:bottom right}100%{opacity:0;transform:scale(0, 0);transform-origin:bottom right}}@keyframes fb_bounce_out_from_left{0%{opacity:1;transform:scale(1, 1);transform-origin:bottom left}100%{opacity:0;transform:scale(0, 0);transform-origin:bottom left}}@keyframes fb_bounce_out_v2_mobile_chat_started{0%{opacity:1;top:0}100%{opacity:0;top:20px}}@keyframes fb_customer_chat_bubble_bounce_in_animation{0%{bottom:6pt;opacity:0;transform:scale(0, 0);transform-origin:center}70%{bottom:18pt;opacity:1;transform:scale(1.2, 1.2)}100%{transform:scale(1, 1)}}@keyframes slideInFromBottom{0%{opacity:.1;transform:translateY(100%)}100%{opacity:1;transform:translateY(0)}}@keyframes slideInFromBottomDelay{0%{opacity:0;transform:translateY(100%)}97%{opacity:0;transform:translateY(100%)}100%{opacity:1;transform:translateY(0)}}</style></head>
+
+<body>
+
+
+
+
+<nav id="nav" role="navigation">
+	<a href="#nav" title="Mostrar navegação"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Mostrar navegação</font></font></a>
+	<a href="#" title="Ocultar navegação"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ocultar navegação</font></font></a>
+	<ul class="clearfix">
+		<li><a href="index.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Sair</font></font></a></li>
+		<li>
+			<a href="#" aria-haspopup="true"><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Serviços</font></font></span></a>
+			<ul>
+				<li><a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Notas</font></font></a></li>
+				<li><a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Frequencia</font></font></a></li>
+				<li><a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Arquivos</font></font></a></li>
+			<!--
+                <li><a href="?javascript"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"></font></font></a></li>
+			-->
+            </ul>
+		</li>
+		<li>
+			<a href="?work" aria-haspopup="true"><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Informações</font></font></span></a>
+			<ul>
+				<li><a href="avaliacaoescolar.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">avaliacaoescolar</font></font></a></li>
+				<li><a href="?typography"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Dados do professor</font></font></a></li>
+				<li><a href="?frontend"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">chat da escola</font></font></a></li>	
+                <li> <a href="BDEscola.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Escolas mas avaliadas</font></font></a></li>
+            </ul>
+		</li>
+	</ul>
+</nav>
+
+<script type="text/javascript" async="" src="https://ssl.google-analytics.com/ga.js"></script><script src="../jquery.min.js"></script>
+<script src="doubletaptogo.js"></script>
+<script>
+	$( function()
+	{
+		$( '#nav li:has(ul)' ).doubleTapToGo();
+	});
+</script>
+
+
+
+
+<!--
+	STUFF
+-->
+
+<!--
+   
+<div class="ad">
+	<a href="#" class="ad__close" title="Feche o anúncio"></a>
+	<script async="" src="//cdn.carbonads.com/carbon.js?zoneid=1673&amp;serve=C6AILKT&amp;placement=osvaldasinfo" id="_carbonads_js"></script><div id="carbonads"><span><span class="carbon-wrap"><a href="https://srv.carbonads.net/ads/click/x/GTND42JLCY7DC2QJCESLYKQNCVBIE23LCYYD5Z3JCY7DP53YCKSDKKQKC67D42JECABD5K77CKSIP23NCTADCK3YHEYIKKJNCVYI5KJECTNCYBZ52K?segment=placement:osvaldasinfo;" class="carbon-img" target="_blank" rel="noopener sponsored"><img src="https://cdn4.buysellads.net/uu/1/93750/1623245249-PCI-EN-v2.jpg" alt="ads via Carbon" border="0" height="100" width="130" style="max-width: 130px;"></a><a href="https://srv.carbonads.net/ads/click/x/GTND42JLCY7DC2QJCESLYKQNCVBIE23LCYYD5Z3JCY7DP53YCKSDKKQKC67D42JECABD5K77CKSIP23NCTADCK3YHEYIKKJNCVYI5KJECTNCYBZ52K?segment=placement:osvaldasinfo;" class="carbon-text" target="_blank" rel="noopener sponsored">Get on-demand storage, accessible via APIs and S3-compatible. Resilient, secure and cost-effective!</a></span><a href="http://carbonads.net/?utm_source=osvaldasinfo&amp;utm_medium=ad_via_link&amp;utm_campaign=in_unit&amp;utm_term=carbon" class="carbon-poweredby" target="_blank" rel="noopener sponsored">ads via Carbon</a><img src="https://ovh.commander1.com/v3/?tcs=3810&amp;rand=$CACHEBUSTER$&amp;chn=display&amp;src=buysellads&amp;cty=US&amp;site_domain=https://www.ovhcloud.com/&amp;cmp=we_int_2021_ovh_cloud_PCI_undefinite_sale_acquisition&amp;crtive=dimg_260x200_260x200_v1" border="0" height="1" width="1" alt="ads via Carbon" style="display: none;"></span></div>
+</div>
+
+<script src="../main.js"></script><div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; width: 0px; height: 0px;"><div></div></div></div><script src="//connect.facebook.net/en_GB/all.js" id="facebook-jssdk" async=""></script><script src="//apis.google.com/js/plusone.js" async="" gapi_processed="true"></script><script src="//platform.twitter.com/widgets.js" id="twitter-wjs" charset="utf-8" async=""></script>
+<script>var _gaq = _gaq || []; _gaq.push(['_setAccount', 'UA-7572727-1']); _gaq.push(['_trackPageview']); (function() { var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })();</script>
+
+   
+    <div class="sm">
+	<ul>
+		<li><a href="http://osvaldas.info/drop-down-navigation-responsive-and-touch-friendly" class="sm__back" title="Navegação suspensa: sensível ao toque e responsiva"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Artigo</font></font></a></li>
+		<li><div class="socialite facebook-like socialite-instance socialite-loaded" data-href="http://osvaldas.info/drop-down-navigation-responsive-and-touch-friendly" data-send="false" data-layout="button_count" data-width="60" data-show-faces="false" data-default-href="http://facebook.com/sharer/sharer.php?u=http://osvaldas.info/drop-down-navigation-responsive-and-touch-friendly" data-socialite="0"><div class="fb-like fb_iframe_widget" data-href="http://osvaldas.info/drop-down-navigation-responsive-and-touch-friendly" data-send="false" data-layout="button_count" data-width="60" data-show-faces="false" data-default-href="http://facebook.com/sharer/sharer.php?u=http://osvaldas.info/drop-down-navigation-responsive-and-touch-friendly" data-socialite="0" fb-xfbml-state="rendered" fb-iframe-plugin-query="app_id=&amp;container_width=0&amp;href=http%3A%2F%2Fosvaldas.info%2Fdrop-down-navigation-responsive-and-touch-friendly&amp;layout=button_count&amp;locale=en_GB&amp;sdk=joey&amp;send=false&amp;show_faces=false&amp;width=60"><span style="vertical-align: bottom; width: 90px; height: 28px;"><iframe name="f2e3d47c5ad5414" width="60px" height="1000px" data-testid="fb:like Facebook Social Plugin" title="fb:like Facebook Social Plugin" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="https://www.facebook.com/plugins/like.php?app_id=&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fx%2Fconnect%2Fxd_arbiter%2F%3Fversion%3D46%23cb%3Df335b801672317%26domain%3Dosvaldas.info%26origin%3Dhttps%253A%252F%252Fosvaldas.info%252Ff1388718100f1%26relation%3Dparent.parent&amp;container_width=0&amp;href=http%3A%2F%2Fosvaldas.info%2Fdrop-down-navigation-responsive-and-touch-friendly&amp;layout=button_count&amp;locale=en_GB&amp;sdk=joey&amp;send=false&amp;show_faces=false&amp;width=60" class="" style="border: none; visibility: visible; width: 90px; height: 28px;"></iframe></span></div></div></li>
+		<li><div class="socialite googleplus-one socialite-instance socialite-loaded" data-size="medium" data-href="http://osvaldas.info/drop-down-navigation-responsive-and-touch-friendly" data-default-href="http://plus.google.com/share?url=http://osvaldas.info/drop-down-navigation-responsive-and-touch-friendly" data-socialite="1"><div class="g-plusone" data-size="medium" data-href="http://osvaldas.info/drop-down-navigation-responsive-and-touch-friendly" data-default-href="http://plus.google.com/share?url=http://osvaldas.info/drop-down-navigation-responsive-and-touch-friendly" data-socialite="1" id="___plusone_0"><iframe ng-non-bindable="" frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position:absolute;top:-10000px;width:450px;margin:0px;border-style:none" tabindex="0" vspace="0" width="100%" id="I0_1626220611359" name="I0_1626220611359" src="https://apis.google.com/u/0/se/0/_/+1/fastbutton?usegapi=1&amp;size=medium&amp;default-href=http%3A%2F%2Fplus.google.com%2Fshare%3Furl%3Dhttp%3A%2F%2Fosvaldas.info%2Fdrop-down-navigation-responsive-and-touch-friendly&amp;socialite=1&amp;hl=en-GB&amp;origin=https%3A%2F%2Fosvaldas.info&amp;url=http%3A%2F%2Fosvaldas.info%2Fdrop-down-navigation-responsive-and-touch-friendly&amp;gsrc=3p&amp;jsh=m%3B%2F_%2Fscs%2Fapps-static%2F_%2Fjs%2Fk%3Doz.gapi.pt_BR.VESh1b8XSWM.O%2Fam%3DAQ%2Fd%3D1%2Frs%3DAGLTcCNaCafCsR0qyyuljw2UAMvhNAcnbg%2Fm%3D__features__#_methods=onPlusOne%2C_ready%2C_close%2C_open%2C_resizeMe%2C_renderstart%2Concircled%2Cdrefresh%2Cerefresh%2Constartinteraction%2Conendinteraction&amp;id=I0_1626220611359&amp;_gfid=I0_1626220611359&amp;parent=https%3A%2F%2Fosvaldas.info&amp;pfname=&amp;rpctoken=29635027" data-gapiattached="true"></iframe></div></div></li>
+		<li><div class="socialite twitter-share socialite-instance socialite-loaded" data-text="Drop-Down Navigation: Touch-Friendly and Responsive –" data-url="http://osvaldas.info/drop-down-navigation-responsive-and-touch-friendly" data-via="osvaldas" data-related="osvaldas" data-count="horizontal" data-default-href="http://twitter.com/intent/tweet?url=http://osvaldas.info/drop-down-navigation-responsive-and-touch-friendly&amp;text=Drop-Down Navigation: Touch-Friendly and Responsive&amp;via=osvaldas" data-socialite="2"><iframe id="twitter-widget-1" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" class="twitter-share-button twitter-share-button-rendered twitter-tweet-button" title="Botão de tweet do Twitter" src="https://platform.twitter.com/widgets/tweet_button.06c6ee58c3810956b7509218508c7b56.en.html#dnt=false&amp;id=twitter-widget-1&amp;lang=en&amp;original_referer=https%3A%2F%2Fosvaldas.info%2Fexamples%2Fdrop-down-navigation-touch-friendly-and-responsive%2F&amp;related=osvaldas&amp;size=m&amp;text=Drop-Down%20Navigation%3A%20Touch-Friendly%20and%20Responsive&amp;time=1626220611682&amp;type=share&amp;url=http%3A%2F%2Fosvaldas.info%2Fdrop-down-navigation-responsive-and-touch-friendly&amp;via=osvaldas" data-url="http://osvaldas.info/drop-down-navigation-responsive-and-touch-friendly" style="position: static; visibility: visible; width: 1px; height: 1px;"></iframe></div></li>
+		<li><div class="socialite twitter-follow socialite-instance socialite-loaded" data-type="follow" data-show-count="true" data-default-href="http://twitter.com/osvaldas" data-socialite="3"><iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" class="twitter-follow-button twitter-follow-button-rendered" title="Twitter Follow Button" src="https://platform.twitter.com/widgets/follow_button.06c6ee58c3810956b7509218508c7b56.en.html#dnt=false&amp;id=twitter-widget-0&amp;lang=en&amp;screen_name=osvaldas&amp;show_count=true&amp;show_screen_name=true&amp;size=m&amp;time=1626220611680" data-screen-name="osvaldas" style="position: static; visibility: visible; width: 1px; height: 1px;"></iframe></div></li>
+	</ul>
+</div>
+
+<iframe scrolling="no" frameborder="0" allowtransparency="true" src="https://platform.twitter.com/widgets/widget_iframe.06c6ee58c3810956b7509218508c7b56.html?origin=https%3A%2F%2Fosvaldas.info" title="Iframe de configurações do Twitter" style="display: none;"></iframe><div id="goog-gt-tt" class="skiptranslate" dir="ltr"><div style="padding: 8px;"><div><div class="logo"><img src="https://www.gstatic.com/images/branding/product/1x/translate_24dp.png" width="20" height="20" alt="Google Tradutor"></div></div></div><div class="top" style="padding: 8px; float: left; width: 100%;"><h1 class="title gray">Texto original</h1></div><div class="middle" style="padding: 8px;"><div class="original-text"></div></div><div class="bottom" style="padding: 8px;"><div class="activity-links"><span class="activity-link">Sugerir uma tradução melhor</span><span class="activity-link"></span></div><div class="started-activity-container"><hr style="color: #CCC; background-color: #CCC; height: 1px; border: none;"><div class="activity-root"></div></div></div><div class="status-message" style="display: none;"></div></div><iframe name="oauth2relay490225443" id="oauth2relay490225443" src="https://accounts.google.com/o/oauth2/postmessageRelay?parent=https%3A%2F%2Fosvaldas.info&amp;jsh=m%3B%2F_%2Fscs%2Fapps-static%2F_%2Fjs%2Fk%3Doz.gapi.pt_BR.VESh1b8XSWM.O%2Fam%3DAQ%2Fd%3D1%2Frs%3DAGLTcCNaCafCsR0qyyuljw2UAMvhNAcnbg%2Fm%3D__features__#rpctoken=462229723&amp;forcesecure=1" tabindex="-1" aria-hidden="true" style="width: 1px; height: 1px; position: absolute; top: -100px;"></iframe><div class="goog-te-spinner-pos"><div class="goog-te-spinner-animation"><svg xmlns="http://www.w3.org/2000/svg" class="goog-te-spinner" width="96px" height="96px" viewBox="0 0 66 66"><circle class="goog-te-spinner-path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle></svg></div></div><iframe id="rufous-sandbox" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" style="position: absolute; visibility: hidden; display: none; width: 0px; height: 0px; padding: 0px; border: none;" title="Twitter analytics iframe"></iframe>
+-->
+<div id="aluno">    	
+    <ul>
+        <li> Nome: Professor </li> 
+       <li> Turmas: 5° ano B,6° ano B,7° ano E </li>
+       <li> Perfil: Professor </li>
+       <li> Titulo: Mestrado </li>
+    </ul>
+</div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

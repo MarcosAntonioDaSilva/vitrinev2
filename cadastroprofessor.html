@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+
+<title> CADASTRO </title>
+<link href="FolhadeEstilocadastro.css" Rel="stylesheet" type="text/css">
+
+</head>
+
+<body >
+<div id="instituto">
+<fieldset>
+<legend>Informações Pessoais</legend>
+
+<form>
+<label = "nome">Nome: </label>
+<input type = "text" name = "nome" required placeholder = " Nome:" >
+
+<br> 
+<label = "email">Email: </label>
+<input type = "text" name = "nome" required placeholder = " Email:">
+
+<br> 
+<label = "Data">Data de nascimento: </label>
+<input id="data_id" name="data" type="date">
+<br> 
+
+<label = "sexo"> sexo:  </label>
+<label = "Masculino"> Masculino  </label>
+<input id="masculino_id"name="sexo"type="radio"value="masculino">
+<label = "Feminino"> Feminino  </label>
+<input id="feminino_id"name="sexo"type="radio"value="feminino">
+<br>
+<label = "CPF"> CPF: </label>
+<input id="name_id"name="numero"type="ranger" required placeholder = " CPF:">
+
+</form>
+</fieldset>
+
+<fieldset>
+<legend>Endereco</legend>
+<label = "CEP"> CEP: </label>
+<input id="name_id"name="numero"type="ranger" required placeholder = " CEP:">
+
+<br>
+<label = "Rua"> Rua: </label>
+<input id="Rua_id"name="Rua"type="nome" required placeholder = " Rua:">
+<br>
+
+<label = "Bairo"> Bairro: </label>
+<input id="Bairro_id"name="Bairro"type="nome"  required placeholder = " Bairro:">
+<br>
+
+<label = "Estado"> Estado: </label>
+<input id="Estado_id"name="Estado"type="nome"  required placeholder = " Estado:">
+<br>
+
+<label = "Cidade"> cidade: </label>
+<input id="Cidade_id"name="Cidade"type="nome"  required placeholder = " Cidade:">
+<br>
+
+</fieldset>
+
+<fieldset>
+<legend>Contato</legend>
+<label = "Telefone"> Fone Residencial: </label>
+<input id="residencial_id"name="numero"type="ranger" required placeholder = " Telefone:">
+<br>
+
+<label = "Celular"> Fone Celular: </label>
+<input id="Celular_id"name="Celular"type="ranger" required placeholder = " Celular:">
+</fieldset>
+
+<fieldset>
+<legend> ESCOLHA SEU NÍVEL</legend>
+<select id="cursos" name="Cursos">
+<option	value="EF">Graduado</option>
+<option	value="EM">Mestrado</option>
+<option	value="EM">Doutorado</option>
+<option	value="EM">PHD</option>
+</select>
+</fieldset>
+
+<fieldset>
+    <legend>QUAL A ESCOLA QUE VOCÊ ENSINA E SUA MATRÍCULA</legend>
+    
+    <label = "Escola">Nome da Escola: </label>
+    <input type = "text" name = "Escola" required placeholder = " Escola:">
+
+    <label = "matricula">matricula: </label>
+    <input type = "text" name = "matricula" required placeholder = " matricula:">
+
+</fieldset>
+<br>
+<fieldset>
+    <legend>Digite uma Senha</legend>
+    <input type="password" size="10" maxlength="10"  required placeholder="Maximo 10 caracter"/>
+</fieldset>
+
+<br>
+<fieldset>
+<legend>Comentários sobre a escola que você ensina</legend>
+<label id="Mensagem_id">Comentários:</label>
+<textarea id="Mensagem_id"name="Mensagem"rows = "5" cols="50"> </textarea>
+</fieldset>
+
+<button onclick="(alert('Sejá Bem vindo Professor, seu cadastro foi efetuado'))" id="envia_id"name="enviar"type="submit">Enviar dados do Professor</button>
+
+<a href="index.html">  
+    
+    <button id="voltar_id"name="Voltar"type="submit" value="Voltar"> Voltar </button>
+</a>
+</div>
+</body>
+</html>

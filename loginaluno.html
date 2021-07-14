@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Formulário de Login</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="stylesheet" type="text/css" href="login.css" />
+</head>
+<body>
+  <div class="container" >
+    <a class="links" id="paracadastro"></a>
+    <a class="links" id="paralogin"></a>
+     
+    <div class="content">      
+      <!--FORMULÁRIO DE LOGIN-->
+      <div id="login">
+        <form method="post" action=""> 
+          <!--<h1>Login</h1>--> 
+          <p> 
+            <label for="matricula_login">CPF:</label>
+            <input id="matricula_login" name="matricula_login"  type="text" required placeholder="CPF:"/>
+          </p>
+           
+          <p> 
+            <label for="senha_login">Sua Senha</label>
+            <input id="senha_login" name="senha_login"  type="password" required placeholder="Ex:. 12345678910" /> 
+          </p>
+           
+          <p> 
+            <input type="checkbox" name="manterlogado" id="manterlogado" value="" /> 
+            <label for="manterlogado">Manter-me logado</label>
+          </p>
+               
+          <p class="link">
+            Ainda não tem conta?
+            <a href="cadastroaluno.html">Cadastre-se</a>
+            <a href="navigation-icons.html"> Logar</a>
+        </p>
+        </form>
+      </div>
